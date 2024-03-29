@@ -81,12 +81,12 @@ const day = parseInt(session_datesplit[2]);
   //     { value: 'Uttarakhand', label: 'Uttarakhand' }
   // ];
 
-  const states = ['Haryana', 'Chattisgarh', 'Uttarakhand'];
+  const states = ['Haryana', 'Chattisgarh', 'Uttarakhand', "Punjab", "UP"];
   const agentNames = ['Vinod', 'Kiran', 'Rameshwar'];
 
 
   return (
-    <Form style={{margin : "40px"}}>{}
+    <Form style={{margin : "40px"}}>
         <h4 className="mb-3 d-block">Add Call Session</h4>
         <text className="mb-3 d-block" >Note: All fields should be entered without comma.</text>
 
@@ -114,8 +114,7 @@ const day = parseInt(session_datesplit[2]);
       <Form.Group className="mb-3" >
         <Form.Label className="red-asterisk">Agent Name</Form.Label>
         <Form.Select aria-label="Default select example" name="agent_name" value={formValues.agent_name} onChange={handleChange}>        
-      <option>Open this select menu</option>
-      {agentNames.map(agent => (
+          {agentNames.map(agent => (
                         <option key={agent} value={agent}>{agent}</option>
                     ))}
          </Form.Select>
@@ -125,8 +124,7 @@ const day = parseInt(session_datesplit[2]);
       <Form.Group className="mb-3" >
         <Form.Label className="red-asterisk">State</Form.Label>
         <Form.Select aria-label="Default select example" name="state" value={formValues.state} onChange={handleChange}>
-      <option>Open this select menu</option>
-      {states.map(state => (
+         {states.map(state => (
                         <option key={state} value={state}>{state}</option>
                     ))}
     </Form.Select>
