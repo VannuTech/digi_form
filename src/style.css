@@ -1,0 +1,4 @@
+.red-asterisk::after {
+    content: " *";
+    color: red; /* Set color to red */
+  }
